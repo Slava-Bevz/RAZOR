@@ -1030,9 +1030,6 @@ h6 {
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg)
   }
-  .search {
-    width: 80%
-  }
   .header__top-menu {
     display: none
   }
@@ -1055,6 +1052,11 @@ h6 {
 @media (max-width:37.5em) and (any-hover:none) {
   .icon-menu {
     cursor: default
+  }
+}
+@media (max-width:37.5em) and (max-width:20em) {
+  .search {
+    width: 16.875rem
   }
 }
 @media (max-width:29.99875em) {
@@ -1544,6 +1546,23 @@ h6 {
   @supports not (height:clamp(2.5rem ,2.2080291971rem + 1.4598540146vw ,3.75rem)) {
     .social__link {
       height: calc(2.5rem + 1.25 * (100vw - 20rem)/ 85.625)
+    }
+  }
+}
+@media (max-width:37.5em) and (min-width:105.625em) {
+  .search {
+    width: 23.75rem
+  }
+}
+@media (max-width:37.5em) and (min-width:20em) and (max-width:105.625em) {
+  @supports (width:clamp(16.875rem ,15.2691605839rem + 8.0291970803vw ,23.75rem)) {
+    .search {
+      width: clamp(16.875rem ,15.2691605839rem + 8.0291970803vw ,23.75rem)
+    }
+  }
+  @supports not (width:clamp(16.875rem ,15.2691605839rem + 8.0291970803vw ,23.75rem)) {
+    .search {
+      width: calc(16.875rem + 6.875 * (100vw - 20rem)/ 85.625)
     }
   }
 }
